@@ -1,0 +1,22 @@
+#define pHVALUE
+#include "../../../titratable_martini/martini.itp"
+#include "../../../titratable_martini/molecules.itp"
+
+;;;;;; MOLE Bead (MOLEB)
+
+[ moleculetype ]
+; molname   nrexcl
+  MOLEB       1
+
+[ atoms ]
+;id     type    resnr   residu  atom    cgnr    charge
+ 1      MOLE     1       MOLE     MOLE      1       0.00
+
+[ system ]
+MOLE in Titratable Water Box
+
+[ molecules ]
+; molecule name     nr
+MOLEB                1
+WNA                 1147
+H+                  1147
