@@ -1,0 +1,62 @@
+[ defaults ]
+1 2
+
+[ atomtypes ]
+
+; dummy sides
+DW    24.0 0.000 A 0.0 0.0   ; dummy particle in water
+DA1    24.0 0.000 A 0.0 0.0  ; dummy particle large acid negative
+DA2    24.0 0.000 A 0.0 0.0  ; dummy particle large acid positive
+DB1    24.0 0.000 A 0.0 0.0  ; dummy particle large base neutral
+DB2    24.0 0.000 A 0.0 0.0  ; dummy particle large base positive
+DB3    24.0 0.000 A 0.0 0.0  ; dummy particle small base positive
+DB4    24.0 0.000 A 0.0 0.0  ; dummy particle small base neutral
+
+; proton and water bead
+POS    24.0 0.000 A 0.0 0.0  ; proton bead
+WNT    24.0 0.000 A 0.0 0.0  ; water bead
+
+; titratable beads bases
+N5d_10.8R   24.0 0.000 A 0.0 0.0  ; e.g. R-CH2-CH2-CH2-NH2
+N5d_10.8F   24.0 0.000 A 0.0 0.0  ; e.g. propylamine
+N2_10.2     24.0 0.000 A 0.0 0.0  ; e.g. trimethylamine
+SN6d_10.6F  24.0 0.000 A 0.0 0.0  ; e.g. ethylamine
+SN6d_10.6R  24.0 0.000 A 0.0 0.0  ; e.g. R-CH2-CH2-NH2
+SN6d_6.0    24.0 0.000 A 0.0 0.0  ; e.g. 2-methylpyridine
+SN6d_4.8    24.0 0.000 A 0.0 0.0  ; e.g. aniline
+
+; titratable beads acids
+P2_4.8 24.0 0.000 A 0.0 0.0 ; e.g. acetic-acid
+P2_4.0 24.0 0.000 A 0.0 0.0 ; e.g. dichlofenac
+
+; charged beads
+Q1    72.0 0.000 A 0.0 0.0  ; head group choline
+Q5    72.0 0.000 A 0.0 0.0  ; head group phosphate
+SQ3p  54.0 0.000 A 0.0 0.0
+SQ5n  54.0 0.000 A 0.0 0.0
+SQ4p  54.0 0.000 A 0.0 0.0
+
+; neutral beads
+N4a    72.0 0.000 A 0.0 0.0
+SN4a   54.0 0.000 A 0.0 0.0
+TN3d   36.0 0.000 A 0.0 0.0
+SC6    54.0 0.000 A 0.0 0.0
+SC5    54.0 0.000 A 0.0 0.0
+TC5    36.0 0.000 A 0.0 0.0
+TC4    36.0 0.000 A 0.0 0.0
+C4h    72.0 0.000 A 0.0 0.0
+C4     72.0 0.000 A 0.0 0.0
+SC3    54.0 0.000 A 0.0 0.0
+TC2    36.0 0.000 A 0.0 0.0
+SC2    54.0 0.000 A 0.0 0.0
+C1     72.0 0.000 A 0.0 0.0
+X2     72.0 0.000 A 0.0 0.0
+SX2    54.0 0.000 A 0.0 0.0
+
+[ nonbond_params ]
+
+#include "dummy_beads.itp"
+#include "neutral_beads.itp"
+#include "charged_beads.itp"
+#include "titratable_beads_self_proton.itp"
+#include "pH_dep_interactions.itp"

@@ -1,0 +1,29 @@
+File Contents
+
+martini.itp  ->   topology head-file to be included in .top file
+
+it includes:
+- charged_beads.itp
+- neutral_beads.itp
+- titratable_beads_cross.itp
+- dummy_beads.itp
+- pH_dep_interactions.itp
+- titratable_beads_self_proton.itp
+
+molecules.itp -> parameters for small molecules used for titrations, free energies of transfer and membrane affinities
+lipids.tip    -> parameters for DPPC, POPC, DOPC martiniv3 lipids
+ion.itp       -> parameters for hydrated sodium and chloride
+PPI.itp       -> parameters for G5 dendrimer
+
+example.top   -> example topology file matching the example.gro/mdp
+example.mdp   -> example run settings file
+example.gro   -> example structure file for titratable water with single PVA molecule
+
+++++++++++++++++++++++++++++++++++++ UPDATES +++++++++++++++++++++++++++++++++++++++++++
+18.11.2021  Fabian Grunewald
+            -> updated the neutral bead interactions to the most recent release of Martini3
+            -> included proto interactions for SQ3p, SQ4p, SQ5n, Q5; at the moment they're NAN
+            -> q dummy bead interactions are moved to charged_beads.itp and removed from
+               dummy beads
+            -> Since the PC headgroups changed from Q5n/Q1p to Q5/Q1 the interactions have been
+               renamed and updated

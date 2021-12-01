@@ -1,0 +1,38 @@
+integrator               = md       ; option to use SD 
+tinit                    = 0.0
+dt                       = 0.01     ; use 0.008 with amines or if unstable
+nsteps                   = 5000000
+
+nstxout                  = 0
+nstvout                  = 0
+nstlog                   = 1000
+nstenergy                = 100
+nstxtcout                = 1000
+
+nstlist                  = 10
+rlist                    = 1.2
+
+coulombtype              = PME                      ; do not change
+coulomb-modifier         = Potential-shift-verlet
+rcoulomb                 = 1.1
+epsilon_r                = 6                        ; do not change 
+vdw_type                 = cutoff  
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1                      ; do not change
+
+tcoupl                   = v_rescale
+tc-grps                  = system
+tau_t                    = 1.0  
+ref_t                    = 298.15
+Pcoupl                   = Parrinello-Rahman 
+Pcoupltype               = isotropic
+tau_p                    = 12.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
+
+gen_vel                  = no
+gen_temp                 = 298.15
+gen_seed                 = -1
+
+lincs-order              = 8                      ; optional but increases palatalization
+lincs-iter               = 2                      ; optional but increases palatalization

@@ -1,0 +1,13 @@
+#define pH7.5 
+#include "martini.itp"
+#include "molecules.itp"
+
+[ System ]
+;Name
+water
+
+[ molecules ]
+; compound #mols
+PVA 1
+WNA 2022
+H+  2023                                                                                                                                                     

@@ -1,0 +1,17 @@
+;;;;;; WATER (representing 4 H2O molecules)
+
+[ moleculetype ]
+; molname  	nrexcl
+  NA 	    	1
+
+[ atoms ]
+;id 	type 	resnr 	residu 	atom 	cgnr 	charge
+ 1 	Q1p  	1 	ION 	Q1 	1        1.0 
+
+[ moleculetype ]
+; molname  	nrexcl
+  CL 	    	1
+
+[ atoms ]
+;id 	type 	resnr 	residu 	atom 	cgnr 	charge
+ 1 	Q5n 	1 	ION  	Q5 	1        -1.0  
